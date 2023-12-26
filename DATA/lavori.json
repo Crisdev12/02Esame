@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "immagine": "IMG/GraficaLogo.jpg",
+    "larghezza": 400,
+    "altezza": 400
+  },
+  {
+    "id": 2,
+    "immagine": "IMG/Graficaballerina.jpg",
+    "larghezza": 400,
+    "altezza": 400
+  },
+  {
+    "id": 3,
+    "immagine": "IMG/Graficaphone.jpeg",
+    "larghezza": 400,
+    "altezza": 400
+  },
+  {
+    "id": 4,
+    "immagine": "IMG/Graficastories.jpg",
+    "larghezza": 400,
+    "altezza": 400
+  }
+]
+
