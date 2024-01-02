@@ -1,6 +1,18 @@
 <?php 
 $pageTitle = 'Home Page';
 include('header.php'); 
+
+$skills = [
+    ['HTML', 'html.png'],
+    ['CSS', 'css.png'],
+    ['PHOTOSHOP', 'photoshop.png']
+];
+
+// Converto l'array in JSON
+$jsonSkills = json_encode($skills, JSON_PRETTY_PRINT);
+
+// Salvataggio del JSON in un file
+file_put_contents('skills.json', $jsonSkills);
 ?>
 
 <div class="cover" style="background-image: url('IMG/hero.jpg');">
@@ -17,12 +29,6 @@ include('header.php');
     <p>Finora ho studiato e acquisito competenze in diversi campi, focalizzandomi principalmente su HTML, CSS e Photoshop. Di seguito puoi trovare una panoramica delle mie competenze principali:</p>
 
     <?php
-    $skills = [
-        ['HTML', 'html.png'],
-        ['CSS', 'css.png'],
-        ['PHOTOSHOP', 'photoshop.png']
-    ];
-
     foreach ($skills as $skill) {
         echo '<div class="skill-item">';
         echo '<h3>' . $skill[0] . '</h3>';

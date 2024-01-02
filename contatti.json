@@ -1,0 +1,7 @@
+[
+    {"name": "nome", "label": "Il tuo nome", "type": "text", "placeholder": "Inserisci il tuo nome"},
+    {"name": "cognome", "label": "Il tuo cognome", "type": "text", "placeholder": "Inserisci il tuo cognome"},
+    {"name": "email", "label": "La tua email", "type": "email", "placeholder": "Inserisci la tua email"},
+    {"name": "telefono", "label": "Il tuo numero di telefono", "type": "tel", "placeholder": "Inserisci il tuo numero di telefono"},
+    {"name": "note", "label": "Scrivi un messaggio", "type": "textarea", "placeholder": "Inserisci il tuo messaggio"}
+]

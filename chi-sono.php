@@ -1,17 +1,31 @@
 <?php 
 $pageTitle = 'Chi Sono';
 include('header.php'); 
+
+$aboutMeContent = [
+    'image' => 'IMG/FotoPersonale.jpg',
+    'title' => 'Chi Sono',
+    'paragraphs' => [
+        'Sono un appassionato professionista del web.',
+        'La mia missione è fornire soluzioni digitali innovative e personalizzate che soddisfino le esigenze uniche di ciascun cliente.'
+    ]
+];
 ?>
 
 <div class="grid extra-content">
     <section class="about-me">
-        <img src="IMG/FotoPersonale.jpg" class="img-res img-round" alt="Foto Personale">
-        <h2>Chi Sono</h2>
-        <p>Sono un appassionato professionista del web con anni di esperienza nel campo. La mia creatività e competenza mi permettono di affrontare progetti di ogni dimensione e complessità.</p>
-        <p>La mia missione è fornire soluzioni digitali innovative e personalizzate che soddisfino le esigenze uniche di ciascun cliente.</p>
+        <img src="<?php echo $aboutMeContent['image']; ?>" class="img-res img-round" alt="Foto Personale">
+        <h2><?php echo $aboutMeContent['title']; ?></h2>
+        <div class="columns">
+            <?php foreach ($aboutMeContent['paragraphs'] as $paragraph) : ?>
+                <p><?php echo $paragraph; ?></p>
+            <?php endforeach; ?>
+        </div>
 
-        <p>Per vedere alcuni dei miei lavori effettuati, clicca qui:</p>
-        <a href="lavori-effettuati.php" class="button">Lavori Effettuati</a>
+        <div class="button-wrapper">
+            <p>Per vedere alcuni dei miei lavori effettuati, clicca qui:</p>
+            <a href="lavori-effettuati.php" class="button">Lavori Effettuati</a>
+        </div>
     </section>
 </div>
 
@@ -21,3 +35,4 @@ include('header.php');
 <a href="contatti.php" class="button-contact">Contattami</a>
 
 <?php include('footer.php'); ?>
+

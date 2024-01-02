@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Web Design",
+        "description": "Creazione di design accattivanti e intuitivi per siti web.",
+        "image": "IMG\/webdesign.jpg"
+    },
+    {
+        "title": "Sviluppo di Siti Web",
+        "description": "Sviluppo di siti web responsive e funzionali.",
+        "image": "IMG\/svluppositiweb.jpg"
+    },
+    {
+        "title": "Consulenza Tecnica",
+        "description": "Consulenza approfondita su soluzioni tecnologiche.",
+        "image": "IMG\/consulenzatecnica.jpg"
+    }
+]

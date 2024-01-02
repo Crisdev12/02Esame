@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pageTitle = 'Lavori Effettuati';
 include('header.php'); 
 ?>
@@ -6,11 +6,11 @@ include('header.php');
 <div class="grid extra-content">
     <h1>Lavori Effettuati</h1>
     <h2 class="font-normal">Esplora alcuni dei miei progetti recenti.</h2>
-    <p>Qui troverai una selezione di lavori che ho realizzato per clienti soddisfatti. Ogni progetto è unico, progettato con attenzione ai dettagli e alla funzionalità.</p>
+    <p>Qui troverai una selezione di lavori che ho realizzato per clienti soddisfatti.</p>
 
     <div class="grid hero">
         <?php
-        $jsonFile = file_get_contents('DATA/lavori.json');
+        $jsonFile = file_get_contents('lavori.json');
 
         // Verifica se ci sono errori nella lettura del file JSON
         if ($jsonFile === false) {
@@ -36,12 +36,12 @@ include('header.php');
                         </a>
                     </div>';
                 }
-                
             }
         }
         ?>
     </div>
 </div>
+
 <h2>Contattami</h2>
 <p>Hai domande o desideri maggiori informazioni sui servizi offerti?</p>
 <p>Clicca qui :</p>

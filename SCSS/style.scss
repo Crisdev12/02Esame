@@ -1,5 +1,5 @@
 // Importa il font da Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=OpenSans);
 
 // Stili generali
 html, body {
@@ -10,6 +10,52 @@ html, body {
 * {
   font-family: "Open Sans";
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #090808;
+  color: #fff4f4;
+  line-height: 1.4;
+  margin: 0px; 
+  overflow-x: hidden; // Nasconde la barra di scorrimento orizzontale
+}
+
+main {
+  max-width: 1200px; /* Limita la larghezza massima del contenuto principale */
+  margin: 0 auto; /* Centra il contenuto principale all'interno della pagina */
+  padding: 20px; /* spazio ai lati del contenuto principale */
+}
+
+/* margini e spaziatura ai paragrafi per migliorare la leggibilità */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px; /* Aggiunto margine inferiore ai paragrafi */
+}
+
+/*  spaziatura tra gli elementi nel main */
+.elemento {
+  margin-bottom: 10px;
+}
+
+/*  padding al menu per migliorare la visualizzazione */
+.menu {
+  padding: 10px;
+}
+
+/* Media query per gestire layout responsivo sopra i 1200px */
+@media (min-width: 1201px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Suddivide il contenuto in due colonne sopra i 1200px */
+    gap: 20px; /*  spazio tra le colonne */
+  }
+
+  /* Riduci le dimensioni del font su schermi più larghi se necessario */
+  p {
+    font-size: 14px;
+  }
 }
 
 // Variabili per colori e stili
@@ -162,7 +208,7 @@ $button-background: #090808;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, filter 0.3s ease-in-out; 
 
   &:hover {
-    color: #4d6de3;
+    color: #ffcc00;
     transform: scale(1.1);  
   }
 }
@@ -257,6 +303,7 @@ $button-background: #090808;
   background-color: #030128;
   color: #f4f4f4;
   padding: 20px 0;
+  margin-top: 20px; // Aggiunto margine superiore per separare dalla sezione precedente
 }
 
 .footer-content {
@@ -383,14 +430,6 @@ $button-background: #090808;
   }
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #090808;
-  color: #fff4f4;
-  line-height: 1.4;
-  margin: 20px; 
-}
-
 .skills {
   .skill-item {
     display: inline-block;
@@ -432,6 +471,16 @@ body {
     }
   }
 }
+.skills .skill-item img {
+  width: 45%; /* Aumentato dalla versione precedente per una migliore visualizzazione */
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform .3s ease-in-out;
+  margin: 0 auto;
+  display: block; /* Aggiunto display block per centrare l'immagine */
+}
+
 
 .extra-content {
   margin-top: 20px;
@@ -537,15 +586,19 @@ body {
   }
 }
 
+// Aggiunta regola per il form
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #121031; /* Colore di sfondo del form */
+  background-color: #121031;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; // Aggiunto margine superiore per separare dalla sezione precedente
 }
 
+
+// Aggiunta regola per i gruppi di form
 .form-group {
   margin-bottom: 20px;
 
@@ -565,12 +618,14 @@ body {
     border-radius: 8px;
     background-color: #444; /* Colore di sfondo degli input */
     color: #fff;
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
     &:focus {
+      // Modifica del colore di sfondo durante il focus
       outline: none;
-      border-color: #ff2903; 
-      background-color: #555; 
+      border-color: #ff2903;
+      background-color: #555;
+      transform: scale(1.05); // Effetto di leggero ingrandimento durante il focus
     }
   }
 
@@ -579,14 +634,38 @@ body {
     resize: vertical;
   }
 }
+// Regola per il pulsante di invio
+.form-submit-button {
+  background-color: #ffcc00;
+  color: #4d6de3;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
+  &:hover {
+    background-color: #ffd700;
+    color: #e3c342;
+  }
+}
+
+// Regola per gli errori di validazione del form
+.error-message {
+  color: #ff2903;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+// Aggiunta regola per le etichette delle checkbox
 .checkbox-label {
   display: block;
   margin-bottom: 15px;
   font-size: 1rem;
   color: #fff;
+  padding-left: 20px; // Spazio dalla parte sinistra per separare dalle checkbox
 }
-
 #contact-submit {
   background-color: #ff2903;
   color: #fff;
@@ -599,11 +678,12 @@ body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #2ecc71; 
+    background-color: #2ecc71;
+    transform: scale(1.05); // Effetto di leggero ingrandimento durante l'hover
   }
 }
 .grid.hero .col-33 {
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
   text-align: center; 
 }
@@ -653,7 +733,7 @@ body {
 
 /* Stile per ridimensionare le immagini */
 .img-res {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
   margin: 0 auto;
   border-radius: 50%;
