@@ -7,7 +7,9 @@ $aboutMeContent = [
     'title' => 'Chi Sono',
     'paragraphs' => [
         'Sono un appassionato professionista del web.',
-        'La mia missione è fornire soluzioni digitali innovative e personalizzate che soddisfino le esigenze uniche di ciascun cliente.'
+        'La mia missione è fornire soluzioni digitali,
+         innovative e personalizzate che soddisfino
+          le esigenze uniche di ciascun cliente.'
     ]
 ];
 ?>

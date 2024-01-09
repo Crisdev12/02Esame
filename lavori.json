@@ -1,24 +1,32 @@
 [
   {
     "id": 1,
+    "titolo": "",
+    "descrizione": "",
     "immagine": "IMG/GraficaLogo.jpg",
     "larghezza": 400,
     "altezza": 400
   },
   {
     "id": 2,
+    "titolo": "",
+    "descrizione": "",
     "immagine": "IMG/Graficaballerina.jpg",
     "larghezza": 400,
     "altezza": 400
   },
   {
     "id": 3,
+    "titolo": "",
+    "descrizione": "",
     "immagine": "IMG/Graficaphone.jpeg",
     "larghezza": 400,
     "altezza": 400
   },
   {
     "id": 4,
+    "titolo": "",
+    "descrizione": "",
     "immagine": "IMG/Graficastories.jpg",
     "larghezza": 400,
     "altezza": 400

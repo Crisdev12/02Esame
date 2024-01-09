@@ -14,7 +14,7 @@ include('header.php');
             <li>Consulenza Tecnica</li>
         </ul>
 
-        <p>Ogni progetto è personalizzato per soddisfare le tue esigenze specifiche. La mia competenza abbraccia diverse aree, garantendo soluzioni innovative e all'avanguardia. Scopri come posso contribuire al successo del tuo progetto.</p>
+        <p>Ogni progetto è personalizzato per soddisfare le tue esigenze specifiche.</p>
     </section>
 
     <section class="skills">
