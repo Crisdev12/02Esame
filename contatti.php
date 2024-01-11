@@ -6,6 +6,8 @@ $formValido = true;
 $errori = array();
 $formDati = array();
 
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $cognome = filter_input(INPUT_POST, "cognome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -55,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'email' => $email,
             'note' => $messaggio,
             'telefono' => $telefono,
-            'accettazione' => $_POST['accettazione']
+            'accettazione' => isset($_POST['accettazione']) ? $_POST['accettazione'] : ''
         );
     }
 }
